@@ -76,3 +76,34 @@ The organized one — keeps things moving. Will focus on:
 - 🔍 Spend one session exploring prompt patterns and testing outputs  
 - 📆 Plan in sprints with buffer time, follow daily to-do checklist  
 - 💾 Keep backup saves of working code, debug in pairs  
+
+-------
+
+# 🎮 Rock Paper Scissors Game
+
+A simple Rock Paper Scissors game built using **HTML, CSS, and JavaScript**. This project was created as a front-end challenge to practice DOM manipulation, game logic, and styling — all without using any external frameworks or libraries.
+
+---
+
+## 📌 Features
+
+- Classic Rock Paper Scissors gameplay
+- Play against a computer opponent
+- 5-round limit with score tracking
+- Final winner announcement
+- "Play Again" button to restart
+- Responsive and clean UI
+- Fully handled using Vanilla JavaScript and CSS
+
+---
+
+## 🧱 Tech Stack
+
+- **HTML** – structure of the game
+- **CSS** – styling and responsive layout
+- **JavaScript** – game logic and DOM interaction
+
+---
+
+## 📁 Project Structure
+
