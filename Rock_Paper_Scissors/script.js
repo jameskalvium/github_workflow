@@ -53,22 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
     computerScoreDisplay.textContent = computerScore;
   }
 
-  function displayResult(userChoice, computerChoice, result) {
-    if (result === 'draw') {
-      resultDisplay.textContent = `It's a draw! You both chose ${userChoice}.`;
-    } else if (result === 'user') {
-      resultDisplay.textContent = `You win! ${userChoice} beats ${computerChoice}.`;
-    } else {
-      resultDisplay.textContent = `You lose! ${computerChoice} beats ${userChoice}.`;
-    }
+function displayResult(userChoice, computerChoice, result) {
+  if (result === 'draw') {
+    resultDisplay.textContent = `It's a draw! You both chose ${userChoice}.`;
+  } else if (result === 'user') {
+    resultDisplay.textContent = `You win! ${userChoice} beats ${computerChoice}.`;
+  } else {
+    resultDisplay.textContent = `You lose! ${computerChoice} beats ${userChoice}.`;
   }
+
+  // ✅ Play sound here
+  // playResultSound(result);
+}
 
   function endGame() {
     let finalMessage;
     if (userScore > computerScore) {
       finalMessage = "🎉 Congratulations! You won the game!";
+      playResultSound('user');
     } else if (userScore < computerScore) {
       finalMessage = "💻 Game over! Computer wins the game!";
+      playResultSound('computer');
     } else {
       finalMessage = "🤝 It's a tie game! Try again.";
     }
@@ -87,3 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
     playAgainBtn.style.display = "none";
   }
 });
+
+
+// Play a win or lose sound based on the game result
+const winSound = new Audio('./Assests/sounds/win.mp3');
+const loseSound = new Audio('./Assests/sounds/lose.mp3');
+
+function playResultSound(result) {
+  if (result === 'user') {
+    winSound.currentTime = 0;
+    winSound.play();
+  } if (result === 'computer') {
+    loseSound.currentTime = 0;
+    loseSound.play();
+  }
+}
+
