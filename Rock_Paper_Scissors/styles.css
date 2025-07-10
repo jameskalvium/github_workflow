@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,12 +33,15 @@ body {
   border: none;
   border-radius: 5px;
   background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .choice:hover {
   background-color: #d0d0d0;
+  transform: scale(1.08);
 }
+
+
 
 #result {
   margin-top: 20px;
@@ -53,34 +59,39 @@ body {
   font-weight: bold;
 }
 
+/* Use media queries to adjust layout and font size for smaller screen sizes */
 @media (max-width: 600px) {
+  .game-container {
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .choice {
     width: 100%;
     padding: 15px;
     font-size: 1.5em;
+    margin: 8px 0;
   }
 
   #result,
   #score {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+
+  #final-result {
+    font-size: 1.1em;
+  }
+
+  #play-again {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px 0;
   }
 }
-#final-result {
-  margin-top: 20px;
-  font-size: 1.4em;
-  font-weight: bold;
-}
 
-#play-again {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 #play-again:hover {
   background-color: #45a049;
